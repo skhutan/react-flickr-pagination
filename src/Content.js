@@ -14,7 +14,7 @@ const Content = () => (
       sx={{
         borderWidth: '1px',
         borderStyle: 'solid',
-        borderColor: 'primary',
+        borderColor: 'primary'
       }}
     />
     <GalleryProvider>

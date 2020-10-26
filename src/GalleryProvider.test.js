@@ -19,7 +19,7 @@ const RESPONSE_FLICKR = {
         title: 'USNS Piliaau T-AKR-304',
         ispublic: 1,
         isfriend: 0,
-        isfamily: 0,
+        isfamily: 0
       },
       {
         id: '48576995382',
@@ -30,19 +30,19 @@ const RESPONSE_FLICKR = {
         title: 'Freedom',
         ispublic: 1,
         isfriend: 0,
-        isfamily: 0,
-      },
-    ],
+        isfamily: 0
+      }
+    ]
   },
-  stat: 'ok',
+  stat: 'ok'
 };
 
-const mockFetch = data =>
+const mockFetch = (data) =>
   jest.fn().mockImplementation(() =>
     Promise.resolve({
       ok: true,
-      json: () => data,
-    }),
+      json: () => data
+    })
   );
 
 beforeEach(() => {
@@ -53,11 +53,11 @@ it('fetches pictures on mount and passes on', () => {
   const wrapper = shallow(
     <GalleryProvider>
       {({ photos }) => <Gallery photos={photos} />}
-    </GalleryProvider>,
+    </GalleryProvider>
   );
 
   expect(fetch).toHaveBeenCalledWith(
-    'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ffee324251c2815b9b895133af851243&safe_search=1&content_type=1&sort=relevance&text=vessel%20marine&format=json&nojsoncallback=1&per_page=16',
+    'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ffee324251c2815b9b895133af851243&safe_search=1&content_type=1&sort=relevance&text=vessel%20marine&format=json&nojsoncallback=1&per_page=16'
   );
 
   expect(wrapper.find(Gallery).prop('photos')).toEqual(RESPONSE_FLICKR.photo);

@@ -12,8 +12,8 @@ class GalleryProvider extends Component {
 
   componentDidMount() {
     fetch(URL)
-      .then(res => res.json())
-      .then(data => this.setState({ data }));
+      .then((res) => res.json())
+      .then((data) => this.setState({ data }));
   }
 
   render() {

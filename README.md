@@ -49,11 +49,11 @@ This app renders a list of pictures using the [Flickr API](https://www.flickr.co
 
 We would like you to:
 
-* Implement pagination controls to display more pictures. 
-* Try not to spend more than 2 hours on this challenge
-* We're looking for production ready code
-* We would prefer a rock solid partial solution to a rushed complete solution
-* Let us know what you would do next or things you would improve below
+- Implement pagination controls to display more pictures.
+- Try not to spend more than 2 hours on this challenge
+- We're looking for production ready code
+- We would prefer a rock solid partial solution to a rushed complete solution
+- Let us know what you would do next or things you would improve below
 
 ## Explainer
 
