@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination renders correctly as a snapshot 1`] = `
+<Memo(Pagination)
+  currentPage={1}
+  handleNextPage={[MockFunction]}
+  handlePreviousPage={[MockFunction]}
+  lastPage={10}
+>
+  <Styled(div)
+    alignItems="center"
+    justifyContent="space-evenly"
+    marginTop="1rem"
+  >
+    <div
+      className="css-9yaqjg"
+    >
+      <ForwardRef
+        onClick={[MockFunction]}
+      >
+        <Styled(div)
+          __css={
+            Object {
+              "appearance": "none",
+              "bg": "primary",
+              "border": 0,
+              "borderRadius": 4,
+              "color": "white",
+              "display": "inline-block",
+              "fontSize": "inherit",
+              "lineHeight": "inherit",
+              "px": 3,
+              "py": 2,
+              "textAlign": "center",
+              "textDecoration": "none",
+            }
+          }
+          as="button"
+          onClick={[MockFunction]}
+          tx="buttons"
+          variant="primary"
+        >
+          <button
+            className="css-vhv7r1"
+            onClick={[MockFunction]}
+          >
+            Previous Page
+          </button>
+        </Styled(div)>
+      </ForwardRef>
+      <ForwardRef
+        fontSize={2}
+        fontWeight="bold"
+      >
+        <Styled(div)
+          fontSize={2}
+          fontWeight="bold"
+          tx="text"
+        >
+          <div
+            className="css-fm3b53"
+          >
+            1
+            /
+            10
+          </div>
+        </Styled(div)>
+      </ForwardRef>
+      <ForwardRef
+        onClick={[MockFunction]}
+      >
+        <Styled(div)
+          __css={
+            Object {
+              "appearance": "none",
+              "bg": "primary",
+              "border": 0,
+              "borderRadius": 4,
+              "color": "white",
+              "display": "inline-block",
+              "fontSize": "inherit",
+              "lineHeight": "inherit",
+              "px": 3,
+              "py": 2,
+              "textAlign": "center",
+              "textDecoration": "none",
+            }
+          }
+          as="button"
+          onClick={[MockFunction]}
+          tx="buttons"
+          variant="primary"
+        >
+          <button
+            className="css-vhv7r1"
+            onClick={[MockFunction]}
+          >
+            Next Page
+          </button>
+        </Styled(div)>
+      </ForwardRef>
+    </div>
+  </Styled(div)>
+</Memo(Pagination)>
+`;

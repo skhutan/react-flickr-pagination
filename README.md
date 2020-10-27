@@ -57,4 +57,13 @@ We would like you to:
 
 ## Explainer
 
-Your words here.
+I've written custom Page and Pagination components to implement pagination of Flickr photos.
+Given the time provided I've gone with a simple solution of previous/next buttons whilst displaying the current and last pages. Given more time, I'd ideally implement a more fully-fledged solution, allowing selection on an individual page, allowing more options in the pagination nav.
+
+Other things I would do differently given more time:
+
+- Setup and use Eslint config to ensure code is more consistent and reduce errors
+- Use Typescript or at least Prop-Types to more user-friendly usage
+- Add integration and e2es (for example, Cypress), particularly around pagination logic
+- Structure components folder correctly, each with its own folder for tests and implementation
+- Add a loading spinner for when fetching photos and render photos all at once instead of intermittently

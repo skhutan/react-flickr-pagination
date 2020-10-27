@@ -1,7 +1,4 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import GalleryProvider from './GalleryProvider';
-import Gallery from './Gallery';
+import { getPhotoUrl, fetchPhotos } from './flickr';
 
 const RESPONSE_FLICKR = {
   photos: {
@@ -49,16 +46,20 @@ beforeEach(() => {
   global.fetch = mockFetch(RESPONSE_FLICKR);
 });
 
-it('fetches pictures on mount and passes on', () => {
-  const wrapper = shallow(
-    <GalleryProvider>
-      {({ photos }) => <Gallery photos={photos} />}
-    </GalleryProvider>
-  );
+describe('flickr client', () => {
+  describe('fetchPhotos', () => {
+    it('fetches all photos for a page', async () => {
+      const page = 1;
+      expect(await fetchPhotos(page)).toEqual(RESPONSE_FLICKR);
+    });
+  });
 
-  expect(fetch).toHaveBeenCalledWith(
-    'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ffee324251c2815b9b895133af851243&safe_search=1&content_type=1&sort=relevance&text=vessel%20marine&format=json&nojsoncallback=1&per_page=16'
-  );
-
-  expect(wrapper.find(Gallery).prop('photos')).toEqual(RESPONSE_FLICKR.photo);
+  describe('getPhotoUrl', () => {
+    it('retrieves the url for a photo', () => {
+      const photo = RESPONSE_FLICKR.photos.photo[0];
+      expect(getPhotoUrl(photo)).toEqual(
+        'https://farm66.staticflickr.com/65535/48576843611_02c2057179_m.jpg'
+      );
+    });
+  });
 });

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Flex, Box, Image } from 'rebass';
-import logo from './logo.svg';
-import GalleryProvider from './GalleryProvider';
-import Gallery from './Gallery';
+import logo from '../logo.svg';
+import Page from './Page';
 
 const Content = () => (
   <Flex flexWrap="wrap" align="center" flexDirection="column" width={1} p={3}>
@@ -17,9 +16,7 @@ const Content = () => (
         borderColor: 'primary'
       }}
     />
-    <GalleryProvider>
-      {({ photos }) => (photos ? <Gallery photos={photos} /> : 'loading')}
-    </GalleryProvider>
+    <Page />
   </Flex>
 );
 

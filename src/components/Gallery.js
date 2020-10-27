@@ -1,16 +1,14 @@
 import React from 'react';
 import { Flex, Box, Card, Image, Text } from 'rebass';
-
-const getPicUrl = (photo) =>
-  `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_m.jpg`;
+import { getPhotoUrl } from '../clients/flickr';
 
 const Gallery = ({ photos }) => (
   <Flex flexWrap="wrap">
     {photos &&
       photos.map((pic) => (
-        <Box p={2} key={pic.id}>
+        <Box p={2} height={240} key={pic.id}>
           <Card width={240} mx="auto">
-            <Image src={getPicUrl(pic)} width={240} />
+            <Image src={getPhotoUrl(pic)} width={240} />
             <Text>{pic.title}</Text>
           </Card>
         </Box>
